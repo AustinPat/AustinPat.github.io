@@ -1,0 +1,69 @@
+﻿body {
+    text-align: center;
+    
+}
+
+.jumbotron  {
+    height:100em;
+}
+
+#me {
+
+    width: 180px;
+    height: 180px;
+    border-radius:50%;
+    border:solid;
+    border-color:black;
+    margin-top:300px;
+   
+    
+
+}
+ .intro{
+    
+    font-size: 10em;
+    font-family: 'Comfortaa', cursive, Times, serif;
+
+    text-shadow: -1px -1px #000000
+}
+
+
+.contain {
+    max-width: 100%;
+    text-align: center;
+}
+
+.category {
+    position: relative;
+    display: inline-block;
+    overflow:hidden;
+    padding: 40px;
+}
+
+h2 {
+    position:relative;
+   
+}
+
+.category1 {
+    color:white;
+    position: relative;
+    display:inline-grid;
+    padding: 40px;
+}
+
+.zoom {
+    padding:50px;
+    width:600px;
+    height:400px;
+    transition:ease-in-out transform 1s;
+    transition-delay:.1s;
+
+  
+    
+}
+
+.zoom:hover {
+    transform:scale(2.4);
+    z-index: 3;
+}
