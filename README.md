@@ -1,2 +1,2 @@
-# AustinPat.github.io
-Rough draft of my portfolio
+# My Personal Portfolio
+My portfolio created with HTML and CSS
