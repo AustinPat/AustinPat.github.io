@@ -54,8 +54,8 @@ h2 {
 
 .zoom {
     padding:50px;
-    width:600px;
-    height:400px;
+    width:500px;
+    height:300px;
     transition:ease-in-out transform 1s;
     transition-delay:.1s;
 
@@ -66,4 +66,24 @@ h2 {
 .zoom:hover {
     transform:scale(2.4);
     z-index: 3;
+}
+
+.image-container {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    padding: 40px;
+}
+.image-container .after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    color: #FFF;
+}
+.image-container:hover .after {
+    display: block;
+    background: rgba(0, 0, 0, .6);
 }
