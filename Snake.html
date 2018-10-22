@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Monoton|Work+Sans" rel="stylesheet">
+    <link href="../CSS/Style.css" rel="stylesheet" />
+    <title></title>
+</head>
+<body style="background-color:black;">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-light" style="position:fixed; width:100%; z-index:500; background-color:#000000 !important;">
+        <a class="navbar-brand" id="font" style="position:center;  margin-right:auto;" href="#">Austin Patterson</a>
+        <!--<button class="navbar-toggler" style="margin-left:auto;"  type="button"  href="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+         </button>-->
+        <div class="nav" id="navbarNavAltMarkup">
+            <div id="font" class="navbar-nav">
+                <a class="nav-item nav-link active" href="index.html">Home <span class="sr-only"></span></a>
+                <!-- <a class="nav-item nav-link active" href="#Skills">Skills</a>
+                 <a class="nav-item nav-link active" href="#Work">Work</a>
+                <a class="nav-item nav-link active" href="#Contact">Contact</a>-->
+            </div>
+        </div>
+    </nav>
+    <p style="color:white; font-size:20px; padding-top:75px;">This is a snake game that I created using JavaScript. The background changes colors, and the snake gets longer everytime you score a point. The game ends if you hit the border or if you run into a different part of the snake. The snakes food appears randomly on the screen.</p>
+    <canvas id="myCanvas" width="500" height="500" style=" Position:absolute; right:33%; top:155px; border:1px solid #000000;"></canvas>
+
+    <script src="Snake.js"></script>
+</body>
+</html>
