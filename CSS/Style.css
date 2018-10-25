@@ -8,15 +8,19 @@
 }
 
 #me {
-
-    width: 180px;
-    height: 180px;
-    border-radius:50%;
-    margin-top:15%;
-   
-    
-
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    border: solid #ff3535;
+    padding: 12px;
+    margin-top: 15%;
 }
+
+.jumbotron .link:hover {
+    border-bottom: 1px solid #ff3535;
+    padding-bottom: 3px;
+}
+
 
 #font {
     font-family: 'Work Sans'
@@ -100,8 +104,7 @@ h2 {
         width: 100%;
         height: 100%;
         display: none;
-        color: #FFF;
-        transition-delay: 1s;
+        color: #fff;
     }
 .image-container:hover .after {
     display: block;
@@ -109,14 +112,20 @@ h2 {
     
 }
 
+.jumbotron a {
+    
+}
 
 .nav-item:hover {
-    font-size:15px;
-    text-transform:uppercase;
+    font-size: 15px;
+    text-transform: uppercase;
+    border-bottom: 1px solid #ff3535;
+    padding-bottom: 3px
 }
 
 #icon:hover {
-    transform:scale(1.2);
+    transform: scale(1.2);
+    text-shadow: 2px 8px 4px grey;
 }
 
 .div-body {
