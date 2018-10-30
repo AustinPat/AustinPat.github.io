@@ -21,6 +21,13 @@
     padding-bottom: 3px;
 }
 
+.work{
+    display:inline-block;
+    margin-left:20em;
+    margin-right:20em;
+    margin-top:5em;
+    margin-bottom:5em;
+}
 
 #font {
     font-family: 'Work Sans'
@@ -108,7 +115,7 @@ h2 {
     }
 .image-container:hover .after {
     display: block;
-    background: rgba(0, 0, 0, .6);
+    background: rgba(255, 53, 53, .9 );
     
 }
 

@@ -1,6 +1,8 @@
 ﻿canvas = document.getElementById("myCanvas");
 context = canvas.getContext("2d");
 var segments = [];
+var image = new Image();
+image.src = "https://my.vetmatrixbase.com/clients/12679/images/cats-animals-grass-kittens--800x960.jpg";
 //initialize the game pieces
 function gamePiece(x, y, color) {
     this.x = x;
@@ -10,7 +12,7 @@ function gamePiece(x, y, color) {
 }
 //create the snake's head
 var head = new gamePiece(0, 0, "yellow");
-//head = new gamePiece(0, 0, "yellow");
+var head = new gamePiece(0, 0, "yellow");
 //zero out his x y stuff
 head.dirX = 0;
 head.dirY = 0;
@@ -26,18 +28,18 @@ head.move = function () {
     if (this.y < 0) {
         reset();
     }
-    if (this.x > 500) {
+    if (this.x > 480) {
         reset();
     }
-    if (this.y > 500) {
+    if (this.y > 480) {
         reset();
     }
-};
+}
 //universal hit test for head and all other objects
 //create a hit test for the head
 head.hitTest = function (ob) {
     if (this.x < ob.x + ob.size && this.x + this.size > ob.x && this.y < ob.y + ob.size && this.y + this.size > ob.y) {
-        return true;
+        return true
     }
     return false;
 };
@@ -51,12 +53,12 @@ food.move = function () {
     var y = Math.floor(Math.random() * 25) * 20;
     this.x = x;
     this.y = y;
-};
+}
 //reset function
 function reset() {
     //place head in center of board
-    head.x = 250;
-    head.y = 250;
+    head.x = 240;
+    head.y = 240;
     //make sure it doesn't move
     head.dirX = 0;
     head.dirY = 0;
@@ -121,9 +123,9 @@ function draw() {
 var thread = setInterval(draw, 50);
 
 
-/*
+/**
 key controls
-*/
+**/
 document.onkeydown = function (e) {
     //capture the event
     e = window.event || e;
@@ -133,22 +135,22 @@ document.onkeydown = function (e) {
     e.preventDefault();
     //establish my own behavior
     //right arrow
-    if (key === 39) {
+    if (key == 39) {
         head.dirX = 1;
         head.dirY = 0;
     }
     //left arrow
-    if (key === 37) {
+    if (key == 37) {
         head.dirX = -1;
         head.dirY = 0;
     }
     //up arrow
-    if (key === 38) {
+    if (key == 38) {
         head.dirX = 0;
         head.dirY = -1;
     }
     //down arrow
-    if (key === 40) {
+    if (key == 40) {
         head.dirX = 0;
         head.dirY = 1;
     }
