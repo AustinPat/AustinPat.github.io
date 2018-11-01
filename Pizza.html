@@ -1,0 +1,165 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <title>Pizza Heavan</title>
+    <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
+    <meta content="width=device-width,initial-scale=1.0" name="viewport">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Monoton|Work+Sans" rel="stylesheet">
+    <link href="../CSS/Style.css" rel="stylesheet" />
+    <style>
+        
+        body {
+            background-color: #ffc6a5;
+        }
+
+        #menuBG {
+            width: 400px;
+            height: 470px;
+            margin: 10px auto;
+        }
+
+        #frmMenu {
+            text-align:left;
+            width: 400px;
+            height: 200px;
+        }
+
+        #totalPrice {
+            width: 200px;
+            height: 190px;
+            margin: 0 auto;
+            float: right;
+        }
+
+        .left {
+
+            margin-top:30px;
+            width: 200px;
+            height: 200px;
+            float: left;
+        }
+
+        .right {
+            margin-top:30px;
+            width: 200px;
+            height: 200px;
+            float: right;
+        }
+
+        #showText {
+            width: 200px;
+            height: 190px;
+            margin: 0px auto;
+            float: left;
+        }
+
+        #cart {
+            margin-top: 20px;
+            margin-left: 0%;
+            width: 400px;
+            height: 200px;
+        }
+
+        #btnOrder {
+            margin-top: 40px; 
+            width: 100px;
+            height: 40px
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-light" style="position:fixed; width:100%; z-index:500; background-color:#000000 !important;">
+        <a class="navbar-brand" id="font" style="position:center;  margin-right:auto;" href="#">Austin Patterson</a>
+        <!--<button class="navbar-toggler" style="margin-left:auto;"  type="button"  href="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+         </button>-->
+        <div class="nav" id="navbarNavAltMarkup">
+            <div id="font" class="navbar-nav">
+                <a class="nav-item nav-link active" href="index.html">Home <span class="sr-only"></span></a>
+                <!-- <a class="nav-item nav-link active" href="#Skills">Skills</a>
+                 <a class="nav-item nav-link active" href="#Work">Work</a>
+                <a class="nav-item nav-link active" href="#Contact">Contact</a>-->
+            </div>
+        </div>
+    </nav>
+    <p id="font" style="color:black; font-size:20px; padding-top:75px;">This is a pizza ordering website I created using HTML and JavaScript. It allows you to create your own custom pizza and submit an order that then lists off everything that you ordered and your total price.</p>
+    <div id="menuBG">
+        <h1 id="font" style="margin:0 0px 0 20px;">Create your pizza!</h1>
+        <input  id="btnOrder" type="button" onclick="getReceipt()"
+               value="Place Order">
+
+        <form id="frmMenu">
+            <div id="font" class="menu left">
+                <h4>Size:</h4>
+                <input class="size" type="radio" name="Size" value="Personal" checked> Personal<br>
+                <input class="size" type="radio" name="Size" value="Medium"> Medium<br>
+                <input class="size" type="radio" name="Size" value="Large"> Large<br>
+                <input class="size" type="radio" name="Size" value="Extra Large">Extra Large
+
+            </div>
+            <div id="font" class="menu right">
+                <h4>Meat:</h4>
+                <input class="meats" type="checkbox" name="Meat" value="Pepperoni" checked>Pepperoni<br>
+                <input class="meats" type="checkbox" name="Meat" value="Chicken">Chicken<br>
+                <input class="meats" type="checkbox" name="Meat" value="Sausage">Sausage<br>
+                <input class="meats" type="checkbox" name="Meat" value="Canadian bacon">Canadian bacon<br>
+                <input class="meats" type="checkbox" name="Meat" value="Ground Beef">Ground Beef<br>
+                <input class="meats" type="checkbox" name="Meat" value="Anchovy">Anchovy<br>
+            </div>
+
+            <div id="font" class="menu right">
+                <h4>Base Sauce:</h4>
+                <input class="sauce" type="radio" name="Sauce" value="Marinara" checked>Marinara<br>
+                <input class="sauce" type="radio" name="Sauce" value="White"> White<br>
+                <input class="sauce" type="radio" name="Sauce" value="Barbecue">Barbecue<br>
+                <input class="sauce" type="radio" name="Sauce" value="No Sauce">No Sauce
+            </div>
+
+            <div id="font" class="menu right">
+                <h4>Topping:</h4>
+                <input class="topping" type="checkbox" name="Topping" value="Pineapple" checked>Pineapple<br>
+                <input class="topping" type="checkbox" name="Topping" value="Olives">Olives<br>
+                <input class="topping" type="checkbox" name="Topping" value="Mushrooms">Mushrooms<br>
+                <input class="topping" type="checkbox" name="Topping" value="Jalepenos">Jalepenos<br>
+                <input class="topping" type="checkbox" name="Topping" value=" Roasted Peppers">Roasted Peppers<br>
+                <input class="topping" type="checkbox" name="Topping" value="Spinach">Spinach<br>
+                <input class="topping" type="checkbox" name="Topping" value="Onions">Onions<br>
+                <input class="topping" type="checkbox" name="Topping" value="Spinach">Tomatoes
+            </div>
+
+            <div id="font" class="menu left">
+                <h4>Cheese:</h4>
+                <input class="cheese" type="radio" name="Cheese" value="Regular Cheese" checked>Regular Cheese<br>
+                <input class="cheese" type="radio" name="Cheese" value="No Cheese">No Cheese<br>
+                <input class="cheese" type="radio" name="Cheese" value="Extra Cheese">Extra Cheese
+            </div>
+
+
+            <div id="font" class="menu left">
+                <h4>Crust:</h4>
+                <input class="crust" type="radio" name="Crust" value="Plain" checked>Plain<br>
+                <input class="crust" type="radio" name="Crust" value="Cheese stuffed">Cheese stuffed<br>
+                <input class="crust" type="radio" name="Crust" value="Spicy">Spicy<br>
+                <input class="crust" type="radio" name="Crust" value="Garlic Butter">Garlic Butter<br>
+                <input class="crust" type="radio" name="Crust" value="House Special">House Special
+            </div>
+
+            <div id="cart">
+                <div id="showText"></div>
+                <div id="totalPrice"></div>
+            </div>
+        </form>
+    </div>
+    <script src="Pizza.js"></script>
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+</body>
+</html>
